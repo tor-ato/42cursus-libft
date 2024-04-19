@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/18 21:10:26 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/19 09:48:48 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,16 +20,7 @@ OBJS = \
 		ft_tolower.o \
 		ft_isdigit.o
 
-# CFILES = \
-# 		ft_isalpha.c \
-# 		ft_islower.c \
-# 		ft_isupper.c \
-# 		ft_toupper.c \
-# 		ft_tolower.c \
-# 		ft_isdigit.c
-
 CFLAGS = -Wall -Wextra -Werror
-
 
 TESTFILES = \
  		ft_isdigit.c \
@@ -37,7 +28,7 @@ TESTFILES = \
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) -rsc $(NAME) $(OBJS)
+	$(AR) -rsc $@ $^
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $^ 
