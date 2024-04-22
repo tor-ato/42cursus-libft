@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 18:40:18 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/22 16:11:02 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/04/21 18:06:45 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/04/22 15:31:05 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strlen(const char *s)
 {
-	while (1)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		if (!*s++)
-			return (NULL);
-	}
+	int	i;
+
+	i = 0;
+	while (*s++)
+		i++;
+	return (i);
 }
+
 // #include <stdio.h>
 // #include <string.h>
 
 // int	main(void)
 // {
-// 	char *test1s;
-// 	test1s = "12345";
-// 	char test1c;
-// 	test1c = '5';
-// 	printf("origin\t%s\n", strchr(test1s, test1c));
-// 	printf("ft\t%s\n", ft_strchr(test1s, test1c));
+// 	char *test1;
+// 	test1 = "12345";
+// 	printf("origin\t%lo\n", strlen(test1));
+// 	printf("ft\t%lo\n", ft_strlen(test1));
 // }

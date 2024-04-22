@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/19 09:48:48 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/22 19:53:01 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,25 @@ OBJS = \
 		ft_isupper.o \
 		ft_toupper.o \
 		ft_tolower.o \
-		ft_isdigit.o
+		ft_isdigit.o \
+		ft_isascii.o \
+		ft_isalnum.o \
+		ft_isprint.o \
+		ft_islower.o \
+		ft_strlen.o \
+		ft_strlcpy.o \
+		ft_strlcat.o \
+		ft_strchr.o \
+		ft_strrchr.o \
+		ft_strncmp.o \
+		ft_strnstr.o 
 
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
- 		ft_isdigit.c \
+		ft_strrchr.o \
+		ft_strlen.o
+
 
 all : $(NAME)
 
@@ -41,7 +54,7 @@ fclean : clean
 
 re : fclean all
 
-test :  $(TESTFILES)
+tst :  $(TESTFILES)
 	$(CC) $(CFLAGS) $^
 	./a.out
 
