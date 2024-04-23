@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/22 19:53:01 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/23 15:25:39 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ OBJS = \
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
-		ft_strrchr.o \
+		ft_strlcpy.o \
 		ft_strlen.o
 
 
