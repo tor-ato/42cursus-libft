@@ -6,8 +6,10 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:48:23 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/24 19:48:30 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/25 18:09:16 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	memcmp(const void *s1, const void *s2, size_t n);

@@ -6,8 +6,10 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:54:05 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/24 19:54:20 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/25 18:09:21 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memmove(void *dest, const void *src, size_t n);

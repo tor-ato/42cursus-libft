@@ -6,8 +6,10 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:48:11 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/24 19:48:13 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/25 16:51:20 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n);
