@@ -15,46 +15,50 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*char_dest;
-	const char	*char_src;
 
-	char_dest = (char *)dest;
-	char_src = (const char *)src;
+	unsigned char		*char_dest;
+	unsigned const char	*char_src;
+
+	char_dest = dest;
+	char_src = src;
 	if (dest < src)
 	{
 		while (n--)
 			*char_dest++ = *char_src++;
-		printf("dest < src \t b\n");
 	}
 	else
 	{
-		char_dest += n;
-		char_src += n;
+		char_dest = char_dest + n -1;
+		char_src = char_src + n -1;
 		while (n--)
 			*char_dest-- = *char_src--;
-		printf("dest > src \t a\n");
 	}
 	return (dest);
 }
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-int	main(void)
-{
-	char str1d[] = {0, 0, 0, 0, 0, 0, 0};
+// int	main(void)
+// {                   
+//     char str1s[] = "123456";
+// 	char str1[] =  "112456";
 
-	char str1s[] = {65, 66, 67, 68, 69, 0, 45};
+// 	memmove(str1s + 1, str1s, 2  );
 
-	memmove(str1d, str1s + 2, sizeof(str1s) - 2);
+//     printf("\n");
+// 	printf("origin\tstr1s\t %s \n", str1s);
+//     printf("expec str1\t %s \n", str1);
+//     printf("\n");
 
-	printf("origin\t %s \n", str1d);
+//     char str2s[] = "123456";
+// 	char str2[] =  "112456";
 
-	char str2d[] = {0, 0, 0, 0, 0, 0, 0};
-	char str2s[] = {65, 66, 67, 68, 69, 0, 45};
+// 	ft_memmove(str2s + 1, str2s, 2);
 
-	ft_memmove(str2s, str2s + 2, sizeof(str2s) - 2);
+//     printf("\n");
+// 	printf("ft_\tstr2s\t %s \n", str2s);
+//     printf("expec str2\t %s \n", str2);
+//     printf("\n");
 
-	printf("ft_\t %s \n", str2d);
-
-	return (0);
-}
+// 	return (0);
+// }

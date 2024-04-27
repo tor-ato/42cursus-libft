@@ -35,7 +35,10 @@ OBJS =	\
 		ft_toupper.o \
 		ft_tolower.o \
 		ft_calloc.o \
-		ft_strdup.o 
+		ft_strdup.o \
+		ft_islower.o \
+		ft_isupper.o \
+
 
 CFLAGS = -Wall -Wextra -Werror
 
