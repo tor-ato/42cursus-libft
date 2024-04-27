@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/26 16:20:26 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/27 18:00:56 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ OBJS =	\
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
-		ft_memcpy.o
+		ft_memmove.o
 
 all : $(NAME)
 
@@ -61,5 +61,9 @@ re : fclean all
 tst :  $(TESTFILES)
 	$(CC) $(CFLAGS) $^
 	./a.out
+
+
+
+.PHONY: all clean fclean re tst
 
 
