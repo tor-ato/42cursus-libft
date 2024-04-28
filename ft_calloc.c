@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:48:54 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/28 16:41:24 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/28 16:50:16 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ void	*ft_calloc(size_t count, size_t size)
 		ft_bzero(ret, count * size);
 	return (ret);
 }
-
-// if (size && (count * size) / size != count)
-// 	return (NULL);
 
 // #include <limits.h>
 // #include <stdio.h>
@@ -47,6 +44,3 @@ void	*ft_calloc(size_t count, size_t size)
 // 	printf("\n");
 // 	return (0);
 // }
-
-// count * size < SIZE_MAX;
-// count  < SIZE_MAX / size;

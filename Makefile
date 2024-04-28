@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/28 15:59:57 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/28 17:03:24 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,9 +44,9 @@ OBJS =	\
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
-		ft_calloc.o \
-		ft_bzero.o \
-		ft_memset.o
+		ft_strdup.o \
+		ft_strlen.o \
+		ft_memcpy.o
 
 all : $(NAME)
 
