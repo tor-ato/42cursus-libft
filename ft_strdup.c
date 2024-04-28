@@ -19,14 +19,15 @@ char	*ft_strdup(const char *s)
 	int		s_len;
 
 	s_len = ft_strlen(s);
-	printf("len\t %d \n", s_len);
 	str = malloc(sizeof(char) * s_len + 1);
-	printf("str\t %p \n", str);
 	if (!str)
 		return (NULL);
 	if (ft_memcpy(str, s, s_len))
+	{
+		*(str+s_len)=0;
 		return (str);
-	return ((char *)1);
+	}
+	return (NULL);
 }
 
 // #include <limits.h>
