@@ -6,14 +6,16 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 01:33:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/25 18:07:30 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/28 16:17:51 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
 # include <stddef.h>
+# include <stdlib.h>
 
 // par1
 int		ft_isalpha(int c);

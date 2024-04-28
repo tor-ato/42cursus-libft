@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/28 14:43:47 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/28 15:59:57 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,15 @@ OBJS =	\
 		ft_strdup.o \
 		ft_islower.o \
 		ft_isupper.o \
+		ft_calloc.o
 
 
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
-		ft_memcmp.o
+		ft_calloc.o \
+		ft_bzero.o \
+		ft_memset.o
 
 all : $(NAME)
 
@@ -62,7 +65,7 @@ fclean : clean
 re : fclean all
 
 tst :  $(TESTFILES)
-	$(CC) $(CFLAGS) $^
+	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
 
 
