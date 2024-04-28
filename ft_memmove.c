@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:54:05 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/27 18:26:24 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:14:11 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-
 	unsigned char		*char_dest;
 	unsigned const char	*char_src;
 
@@ -28,8 +27,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		char_dest = char_dest + n -1;
-		char_src = char_src + n -1;
+		char_dest = char_dest + n - 1;
+		char_src = char_src + n - 1;
 		while (n--)
 			*char_dest-- = *char_src--;
 	}
@@ -39,7 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // #include <string.h>
 
 // int	main(void)
-// {                   
+// {
 //     char str1s[] = "123456";
 // 	char str1[] =  "112456";
 
