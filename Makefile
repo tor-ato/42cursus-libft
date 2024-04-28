@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/28 14:00:27 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/28 14:43:47 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ OBJS =	\
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
-		ft_memchr.o
+		ft_memcmp.o
 
 all : $(NAME)
 
