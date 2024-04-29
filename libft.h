@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 01:33:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/28 16:17:51 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/29 16:40:01 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		ft_isdigit(int c);
 int		ft_isascii(int c);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 char	*ft_strchr(const char *s, int c);
