@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/30 15:19:57 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/30 17:26:20 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,12 +55,6 @@ OBJS =	\
 
 CFLAGS = -Wall -Wextra -Werror
 
-TESTFILES = \
-	ft_substr.c \
-	ft_strlen.c \
-	ft_strdup.c \
-	ft_strlcpy.c \
-	ft_memcpy.c
 
 
 all : $(NAME)
@@ -79,7 +73,7 @@ fclean : clean
 
 re : fclean all
 
-tst :  $(TESTFILES)
+tst :  $(OBJS)
 	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
 
