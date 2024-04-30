@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:54:05 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/28 13:14:11 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/04/29 18:10:39 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char		*char_dest;
 	unsigned const char	*char_src;
 
+	if (!dest && !src)
+		return (NULL);
 	char_dest = dest;
 	char_src = src;
 	if (dest < src)
