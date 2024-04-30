@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/30 13:35:05 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/04/30 15:19:57 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ OBJS =	\
 		ft_isupper.o \
 		ft_calloc.o \
 		ft_substr.o \
-		ft_strjoin.o \ 
+		ft_strjoin.o \
 		ft_strtrim.o \
 		ft_split.o \
 		ft_itoa.o \
@@ -52,14 +52,16 @@ OBJS =	\
 		ft_putendl_fd.o \
 		ft_putnbr_fd.o
 
-BONUS = ft_lstnew.o
-
 
 CFLAGS = -Wall -Wextra -Werror
 
 TESTFILES = \
+	ft_substr.c \
+	ft_strlen.c \
+	ft_strdup.c \
+	ft_strlcpy.c \
+	ft_memcpy.c
 
-		
 
 all : $(NAME)
 
