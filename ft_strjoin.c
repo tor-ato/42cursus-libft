@@ -6,12 +6,11 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:18 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/30 17:43:08 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/01 12:28:12 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -21,24 +20,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	res = malloc(sizeof(char) * (s1_len + s2_len) + 1);
+	res = (char *)malloc(sizeof(char) * (s1_len + s2_len) + 1);
 	if (!res)
 		return (NULL);
 	ft_strlcpy(res, s1, s1_len + 1);
-	printf("ft_strlcpy\t%s\n", res);
-	ft_strlcat(res, s2, s1_len);
-	printf("ft_strlcat\t%s\n", res);
+	ft_strlcat(res, s2, (s1_len + s2_len) + 1);
 	return (res);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char s1[] = "123";
-	char s2[] = "456";
+// int	main(void)
+// {
+// 	char s1[] = "123";
+// 	char s2[] = "456";
 
-	printf("ft_strjoin\t%s\n", ft_strjoin(s1, s2));
+// 	printf("ft_strjoin\t%s\n", ft_strjoin(s1, s2));
 
-	return (0);
-}
+// 	return (0);
+// }
