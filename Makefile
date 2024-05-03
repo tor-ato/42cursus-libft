@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/04/30 17:26:20 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/03 22:27:02 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ OBJS =	\
 		ft_substr.o \
 		ft_strjoin.o \
 		ft_strtrim.o \
+		ft_strldup.o \
 		ft_split.o \
 		ft_itoa.o \
 		ft_strmapi.o \
@@ -50,10 +51,23 @@ OBJS =	\
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
-		ft_putnbr_fd.o
+		ft_putnbr_fd.o 
+		
 
 
 CFLAGS = -Wall -Wextra -Werror
+
+
+test = \
+	ft_strtrim.o \
+	ft_strchr.o \
+	ft_strlen.o \
+	ft_strrchr.o \
+	ft_strdup.o \
+	ft_memcpy.o \
+	ft_strlcpy.o \
+	ft_strldup.o
+
 
 
 
@@ -73,8 +87,8 @@ fclean : clean
 
 re : fclean all
 
-tst :  $(OBJS)
-	$(CC) $(CFLAGS) -g -fsanitize=address $^
+tst :  $(test)
+	$(CC) $(CFLAGS)  -g -fsanitize=address $^
 	./a.out
 
 
