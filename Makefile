@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/03 22:27:02 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/04 20:38:44 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,8 @@ OBJS =	\
 		ft_putchar_fd.o \
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
-		ft_putnbr_fd.o 
-		
+		ft_putnbr_fd.o \
+		ft_strltrim.o
 
 
 CFLAGS = -Wall -Wextra -Werror
@@ -67,7 +67,29 @@ test = \
 	ft_memcpy.o \
 	ft_strlcpy.o \
 	ft_strldup.o \
-	ft_strltrim.o
+	ft_split.o \
+	ft_calloc.o \
+	ft_bzero.o \
+	ft_memset.o \
+	ft_strltrim.o 
+
+
+
+debug = \
+	ft_strtrim.c \
+	ft_strchr.c \
+	ft_strlen.c \
+	ft_strrchr.c \
+	ft_strdup.c \
+	ft_memcpy.c \
+	ft_strlcpy.c \
+	ft_strldup.c \
+	ft_split.c \
+	ft_calloc.c \
+	ft_bzero.c \
+	ft_memset.c \
+	ft_strltrim.c 
+
 
 
 
@@ -89,9 +111,13 @@ fclean : clean
 re : fclean all
 
 tst :  $(test)
-	$(CC) $(CFLAGS)  -g -fsanitize=address $^
+	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
 
+
+debug :  re
+	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
+	./a.out
 
 
 .PHONY: all clean fclean re tst

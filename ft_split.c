@@ -6,61 +6,75 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/30 14:17:42 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/04 22:03:27 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_split_arraycount(char const *s,char c)
+static int	ft_freeall(char **res, size_t len)
 {
-    size_t count;
-    count = 0;
-    char * trimed_s; 
-    trimed_s = ft_strtrim(s,c);
-    while (*trimed_s)
-    {
-        while(*trimed_s && *trimed_s != c)
-            trimed_s++;
-        if(*trimed_s)
-            count++;
-        while(*trimed_s && *trimed_s == c)
-            trimed_s++;
-    }
-    return count;
+	while (--len)
+		free(*--res);
+	free(res);
+	return (1);
 }
 
+static size_t	ft_split_arraycount(char const *s, char c)
+{
+	size_t	count;
+
+	count = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s && *s != c)
+			s++;
+	}
+	return (count);
+}
 
 char	**ft_split(char const *s, char c)
 {
-    char ** res ;
-    size_t splited_arraysize;
-    char * trimed_s; 
+	char	**res;
+	size_t	splited_arraysize;
+	size_t	splited_arraysize_tmp;
+	char	*stmp;
 
-    trimed_s = ft_strtrim(s,c);
-    splited_arraysize = ft_split_arraysize(s,c);
-    res = ft_calloc(splited_arraysize,sizeof(char));
-
-    while(res && splited_arraysize--)
-    {
-        while(trimed_s && trimed_s != c)
-            trimed_s++;
-        if(trimed_s)
-            res = ft_strldup(trimed_s,c);
-            
-
-    }
-
-    return res;
+	splited_arraysize = ft_split_arraycount(s, c);
+	res = (char **)ft_calloc(splited_arraysize + 1, sizeof(char *));
+	if (!res)
+		return (NULL);
+	splited_arraysize_tmp = splited_arraysize;
+	while (splited_arraysize_tmp && splited_arraysize--)
+	{
+		while (*s && *s == c)
+			s++;
+		if (*s)
+			stmp = (char *)s;
+		while (*s && *s != c)
+			s++;
+		*res = ft_strldup(stmp, s - stmp);
+		if (!*res && ft_freeall(res, splited_arraysize_tmp - splited_arraysize))
+			return (NULL);
+		res++;
+	}
+	return (res - splited_arraysize_tmp);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	s1[] = "aaaaaaaaaAAaaBBaaCCaa";
-	char	set[] = "a";
+// int	main(void)
+// {
+// 	char s1[] = "aaAAaaBBaaCCaa";
+// 	char set = 'a';
+// 	char **res = ft_split(s1, set);
 
-	printf("ft_strtrim\t%s\n", ft_strtrim(s1, set));
-	return (0);
-}
+// 	while (*res)
+// 		printf("ft_split\t%s\n", *res++);
+// 	(void)res;
+// 	return (0);
+// }

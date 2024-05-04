@@ -1,8 +1,18 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strltrim.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/04 12:39:49 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/05/04 15:02:42 by tkitahar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strltrim(char const *s1, char const *set,size_t len)
+char	*ft_strltrim(char const *s1, char const *set, size_t len)
 {
 	char	*s2;
 
@@ -25,6 +35,6 @@ char	*ft_strltrim(char const *s1, char const *set,size_t len)
 // 	char	s1[] = "AAaaBBaaCC";
 // 	char	set[] = "a";
 
-// 	printf("ft_strtrim\t%s\n", ft_strltrim(s1, set,2));
+// 	printf("ft_stltrim\t%s\n", ft_strltrim(s1, set, 4));
 // 	return (0);
 // }
