@@ -32,8 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	s1[] = "abcdba";
-// 	char	set[] = "acb";
+// 	char	s1[] = "aaaaaaAAaaBBaaCCaaa";
+// 	char	set[] = "a";
 
 // 	printf("ft_strtrim\t%s\n", ft_strtrim(s1, set));
 // 	return (0);

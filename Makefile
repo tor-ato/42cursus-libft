@@ -66,7 +66,8 @@ test = \
 	ft_strdup.o \
 	ft_memcpy.o \
 	ft_strlcpy.o \
-	ft_strldup.o
+	ft_strldup.o \
+	ft_strltrim.o
 
 
 
