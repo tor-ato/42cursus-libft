@@ -113,11 +113,13 @@ re : fclean all
 tst :  $(test)
 	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
+	$(RM) ./a.out
 
 
 debug :  re
 	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
 	./a.out
+	$(RM) ./a.out
 
 
 .PHONY: all clean fclean re tst
