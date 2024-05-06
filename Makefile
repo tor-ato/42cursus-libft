@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/04 20:38:44 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/06 13:42:22 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 test = \
 	ft_itoa.o \
-	ft_abs.o
+	ft_abs.o \
+	ft_strdup.o \
+	ft_memcpy.o \
+	ft_strlen.o 
 
 
 

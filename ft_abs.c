@@ -1,43 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 14:11:02 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/06 14:18:46 by tkitahar         ###   ########.fr       */
+/*   Created: 2024/05/06 13:46:16 by tkitahar          #+#    #+#             */
+/*   Updated: 2024/05/06 13:46:39 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+unsigned int	ft_abs(int n)
 {
-	char			str[12];
-	unsigned int	absed_n;
-	int				i;
-
-	i = 12;
-	str[--i] = 0;
-	absed_n = ft_abs(n);
-	while (absed_n)
-	{
-		str[--i] = (char)'0' + (absed_n % 10);
-		absed_n /= 10;
-	}
-	if (n < 0)
-		str[--i] = '-';
-	if (n == 0)
-		str[--i] = '0';
-	return (ft_strdup(&str[i]));
+	if (n <= 0)
+		return (~(unsigned int)n + 1u);
+	return ((unsigned int)n);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int n = 0;
-// 	printf("ft_itoa\t%s\n", ft_itoa(n));
-// 	return (0);
-// }
