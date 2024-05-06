@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:02 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/06 14:18:46 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/06 16:01:10 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ char	*ft_itoa(int n)
 
 // int	main(void)
 // {
+// 	char *(*test)(int);
+// 	test = ft_itoa;
 // 	int n = 0;
-// 	printf("ft_itoa\t%s\n", ft_itoa(n));
+// 	printf("ft_itoa\t%s\n", test(n));
 // 	return (0);
 // }

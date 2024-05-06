@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/06 13:42:22 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/06 17:48:53 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,11 +60,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 
 test = \
-	ft_itoa.o \
-	ft_abs.o \
+	ft_strmapi.o \
 	ft_strdup.o \
 	ft_memcpy.o \
-	ft_strlen.o 
+	ft_strlen.o
 
 
 
@@ -87,20 +86,19 @@ clean :
 	$(RM)  $(OBJS)
 
 fclean : clean
-	$(RM) $(NAME)
+	$(RM)  $(NAME)
 
 re : fclean all
 
 tst :  $(test)
 	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
-	$(RM) ./a.out
+
 
 
 debug :  re
 	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
 	./a.out
-	$(RM) ./a.out
 
 
 .PHONY: all clean fclean re tst
