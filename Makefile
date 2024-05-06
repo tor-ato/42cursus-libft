@@ -52,44 +52,22 @@ OBJS =	\
 		ft_putstr_fd.o \
 		ft_putendl_fd.o \
 		ft_putnbr_fd.o \
-		ft_strltrim.o
+		ft_strltrim.o \
+		ft_abs.o
 
 
 CFLAGS = -Wall -Wextra -Werror
 
 
 test = \
-	ft_strtrim.o \
-	ft_strchr.o \
-	ft_strlen.o \
-	ft_strrchr.o \
-	ft_strdup.o \
-	ft_memcpy.o \
-	ft_strlcpy.o \
-	ft_strldup.o \
-	ft_split.o \
-	ft_calloc.o \
-	ft_bzero.o \
-	ft_memset.o \
-	ft_strltrim.o 
+	ft_itoa.o \
+	ft_abs.o
+
 
 
 
 debug = \
 	ft_strtrim.c \
-	ft_strchr.c \
-	ft_strlen.c \
-	ft_strrchr.c \
-	ft_strdup.c \
-	ft_memcpy.c \
-	ft_strlcpy.c \
-	ft_strldup.c \
-	ft_split.c \
-	ft_calloc.c \
-	ft_bzero.c \
-	ft_memset.c \
-	ft_strltrim.c 
-
 
 
 

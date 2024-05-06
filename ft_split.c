@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 	if (!res)
 		return (NULL);
 	splited_arraysize_tmp = splited_arraysize;
-	while (splited_arraysize_tmp && splited_arraysize--)
+	while (splited_arraysize--)
 	{
 		while (*s && *s == c)
 			s++;

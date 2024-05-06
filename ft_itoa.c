@@ -12,4 +12,35 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n);
+// char	*ft_itoa(int n)
+// {
+//     char * str;
+//     unsigned int absed_n;
+
+//     absed_n = ft_abs(n);
+//     if(n < 0)
+//     {
+//         *str = '-';
+//         str++;
+//     }
+//     while (absed_n)
+//     {
+//         *str = (char) '0'+ ( absed_n % 10);
+//         absed_n /= 10;
+//         str++;
+//     }
+//     return ft_strdup(str);
+
+// }
+
+
+
+// #include <stdio.h>
+
+// int main(void)
+// {  
+//     int n = 123;
+
+//     printf("\t%s\n",ft_atoi(n));
+//     return 0;
+// }
