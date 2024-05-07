@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:10:58 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/03 19:41:03 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:33:32 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > s_len)
 		len = s_len;
-	res = malloc(sizeof(char) * (len + 1));
+	if (s_len - start < len)
+		res = malloc(sizeof(char) * (s_len - start + 1));
+	else
+		res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	ft_strlcpy(res, s + start, (len + 1));
