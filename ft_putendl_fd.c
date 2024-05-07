@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:07 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/30 14:19:19 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 11:22:44 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-    return;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
+	return ;
 }
 
 #include <stdio.h>
 
-int main(void)
-{
-    printf("ft_putstr_fd start\n");
-    ft_putendl_fd("12345",1);
-    return 0;
-}
+// int	main(void)
+// {
+// 	printf("ft_putstr_fd start\n");
+// 	ft_putendl_fd("12345", 1);
+// 	printf("end\n");
+// 	return (0);
+// }
