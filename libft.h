@@ -16,6 +16,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
+#include <unistd.h>
 
 // par1
 int		ft_isalpha(int c);

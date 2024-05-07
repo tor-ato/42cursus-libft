@@ -60,7 +60,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 
 test = \
-	ft_striteri.o \
+	ft_putchar_fd.o \
+	ft_putstr_fd.o
 
 
 
