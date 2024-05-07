@@ -12,4 +12,18 @@
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd)
+{
+    write(fd,&c,1);
+    return ;
+}
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     printf("ft_putchar_fd start\n\n");
+//     ft_putchar_fd('c',1);
+//     printf("\n\nend\n");
+//     return 0;
+// }
