@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 01:33:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 11:20:30 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 11:33:35 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 char			*ft_strldup(const char *s, int len);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
