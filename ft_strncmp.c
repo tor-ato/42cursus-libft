@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:39:46 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 12:22:14 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 13:22:43 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (!s1 && !s2)
+	if ((!s1 || !s2) && n == 0)
 		return (0);
 	while ((*s1 || *s2) && n != 0)
 	{
@@ -33,11 +33,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // int	main(void)
 // {
 // 	char *test1s1;
-// 	test1s1 = "12345";
+// 	test1s1 = NULL;
 // 	char *test1s2;
-// 	test1s2 = "12a45";
+// 	test1s2 = "hello";
 // 	int test1;
-// 	test1 = 3;
+// 	test1 = 0;
 // 	printf("origin\t%d\n", strncmp(test1s1, test1s2, test1));
 // 	printf("ft\t%d\n", ft_strncmp(test1s1, test1s2, test1));
 // }
