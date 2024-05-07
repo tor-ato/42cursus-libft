@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:39:46 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/30 12:33:24 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:22:14 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (0);
 	while ((*s1 || *s2) && n != 0)
 	{
