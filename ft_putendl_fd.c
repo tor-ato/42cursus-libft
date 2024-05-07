@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:07 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 11:22:44 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:06:42 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 	return ;
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

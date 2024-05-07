@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:09 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 12:21:36 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:05:19 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 	str[--i] = 0;
 	while (m)
 	{
-		str[--i] = (char)'0' + m % 10;
+		str[--i] = '0' + m % 10;
 		m /= 10;
 	}
 	if (n < 0)

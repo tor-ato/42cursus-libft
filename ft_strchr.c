@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:40:18 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/23 15:24:03 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:03:10 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@ char	*ft_strchr(const char *s, int c)
 		if (*s == (char)c)
 			return ((char *)s);
 		if (!*s++)
-			return ((char *)NULL);
+			return ((char *)0);
 	}
 }
+
 // #include <stdio.h>
 // #include <string.h>
 

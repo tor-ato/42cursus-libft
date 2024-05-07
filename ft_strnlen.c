@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 13:22:30 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/24 15:12:40 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:01:36 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 size_t	ft_strnlen(const char *s, size_t maxlen)
 {
-	size_t len;
+	size_t	len;
+
 	len = 0;
 	while (*s++ && maxlen--)
 		len++;

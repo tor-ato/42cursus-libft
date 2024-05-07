@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:02 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/06 16:01:10 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:07:02 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_itoa(int n)
 	absed_n = ft_abs(n);
 	while (absed_n)
 	{
-		str[--i] = (char)'0' + (absed_n % 10);
+		str[--i] = '0' + (absed_n % 10);
 		absed_n /= 10;
 	}
 	if (n < 0)

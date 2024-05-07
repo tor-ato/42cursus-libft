@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:04 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/30 14:18:43 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:06:02 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1);
-    return ;
+	write(fd, &c, 1);
+	return ;
 }
 
 // #include <stdio.h>
@@ -25,5 +25,5 @@ void	ft_putchar_fd(char c, int fd)
 //     printf("ft_putchar_fd start\n\n");
 //     ft_putchar_fd('c',1);
 //     printf("\n\nend\n");
-//     return 0;
+//     return (0);
 // }
