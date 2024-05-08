@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/07 11:51:22 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/08 11:50:24 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,9 +55,7 @@ OBJS =	\
 		ft_strltrim.o \
 		ft_abs.o
 
-
 CFLAGS = -Wall -Wextra -Werror
-
 
 test = \
 	ft_putchar_fd.o \
@@ -65,15 +63,8 @@ test = \
 	ft_putnbr_fd.o \
 	ft_abs.o \
 
-
-
-
-
 debug = \
 	ft_strtrim.c \
-
-
-
 
 all : $(NAME)
 
@@ -81,9 +72,9 @@ $(NAME) : $(OBJS)
 	$(AR) -rsc $@ $^
 
 %.o : %.c
-	$(CC) -c $(CFLAGS) $^ 
+	$(CC) -c $(CFLAGS) $^
 
-clean : 
+clean :
 	$(RM)  $(OBJS)
 
 fclean : clean
@@ -94,8 +85,6 @@ re : fclean all
 tst :  $(test)
 	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
-
-
 
 debug :  re
 	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
