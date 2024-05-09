@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/08 11:50:24 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/09 16:43:31 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,10 +58,7 @@ OBJS =	\
 CFLAGS = -Wall -Wextra -Werror
 
 test = \
-	ft_putchar_fd.o \
-	ft_putstr_fd.o \
-	ft_putnbr_fd.o \
-	ft_abs.o \
+	ft_lstnew.o
 
 debug = \
 	ft_strtrim.c \
