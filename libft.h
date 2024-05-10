@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 01:33:15 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/09 16:21:36 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:25:00 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void				ft_putendl_fd(char *s, int fd);
 char				*ft_strldup(const char *s, int len);
 void				ft_putnbr_fd(int n, int fd);
 
+// Bonus
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);

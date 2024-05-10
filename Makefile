@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/09 17:57:14 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/10 21:46:02 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,12 +54,14 @@ OBJS =	\
 		ft_putnbr_fd.o \
 		ft_strltrim.o \
 		ft_abs.o \
-		ft_lstnew.o
+		ft_lstnew.o \
+		ft_lstadd_front.o
 
 CFLAGS = -Wall -Wextra -Werror
 
 test = \
-	ft_lstnew.o
+	ft_lstnew.o \
+	ft_lstadd_front.o
 
 debug = \
 	ft_strtrim.c \
