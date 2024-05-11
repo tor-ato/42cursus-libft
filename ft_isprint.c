@@ -6,16 +6,13 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 08:50:10 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/20 16:32:41 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:26:24 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if ((32 <= c) && (c <= 126))
-		return (1);
-	else
-		return (0);
+	return ((32 <= c) && (c <= 126));
 }
 
 // #include <ctype.h>

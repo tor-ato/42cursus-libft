@@ -6,16 +6,13 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:26:14 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/20 15:51:02 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:26:59 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isupper(int c)
 {
-	if ('A' <= c && c <= 'Z')
-		return (1);
-	else
-		return (0);
+	return ('A' <= c && c <= 'Z');
 }
 
 // #include <ctype.h>

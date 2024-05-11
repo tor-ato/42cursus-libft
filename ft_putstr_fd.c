@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:12 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 14:04:14 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:28:06 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_putstr_fd(char *s, int fd)
 	{
 		ft_putchar_fd(*s++, fd);
 	}
-	return ;
 }
 
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:48:11 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/28 14:04:57 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:30:35 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n--)
 	{
-		if (*(const unsigned char *)s++ == (unsigned char)c)
+		if (*(const char *)s++ == (char)c)
 			return ((void *)s - 1);
 	}
 	return (NULL);
