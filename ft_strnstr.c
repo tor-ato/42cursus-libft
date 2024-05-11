@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:41:51 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/24 18:50:41 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:54:33 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	while (*haystack)
 	{
-		if (len < needle_len)
+		if (len-- < needle_len)
 			return (NULL);
-		if (!(ft_strncmp(haystack, needle, needle_len)))
-			return ((char *)haystack);
-		haystack++;
-		len--;
+		if (!(ft_strncmp(haystack++, needle, needle_len)))
+			return ((char *)--haystack);
 	}
 	return (NULL);
 }
