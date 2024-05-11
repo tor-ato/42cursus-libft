@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:09 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 14:05:19 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:34:53 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == 0)
 		str[--i] = '0';
 	ft_putstr_fd(&str[i], fd);
-	return ;
 }
 
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:11:21 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/06 20:14:55 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:35:05 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = -1;
 	while (s[++i])
 		f(i, &s[i]);
-	return ;
 }
 
 // void	ft_shiftchar(unsigned int i, char *c)

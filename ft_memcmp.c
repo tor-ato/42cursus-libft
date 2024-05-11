@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:48:23 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/11 16:31:00 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 16:33:28 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n--)
 	{
-		if (*(const char *)s1++ != *(char *)s2++)
-			return (*(const unsigned char *)(s1 - 1) - *(unsigned char *)(s2
-					- 1));
+		if (*(char *)s1++ != *(char *)s2++)
+			return (*(unsigned char *)(s1 - 1) - *(unsigned char *)(s2 - 1));
 	}
 	return (0);
 }
