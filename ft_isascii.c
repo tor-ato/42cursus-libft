@@ -6,16 +6,13 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 08:50:07 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/07 14:15:25 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:22:09 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (0 <= c && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (0 <= c && c <= 127);
 }
 // #include <ctype.h>
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:09:22 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/20 16:03:32 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:20:37 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if (ft_islower(c) || ft_isupper(c))
-		return (1);
-	else
-		return (0);
+	return (ft_islower(c) || ft_isupper(c));
 }
 
 // #include <ctype.h>

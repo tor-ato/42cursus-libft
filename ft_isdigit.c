@@ -6,16 +6,13 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 19:19:35 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/17 21:45:29 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 15:20:56 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if ('0' <= c && c <= '9')
-		return (1);
-	else
-		return (0);
+	return ('0' <= c && c <= '9');
 }
 
 // #include <ctype.h>
