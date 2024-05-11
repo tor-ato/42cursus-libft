@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:49:14 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/05/03 21:23:47 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 17:14:46 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,10 @@ char	*ft_strdup(const char *s)
 	str = malloc(sizeof(char) * s_len + 1);
 	if (!str)
 		return (NULL);
-	if (ft_memcpy(str, s, s_len))
-	{
-		*(str + s_len) = 0;
-		return (str);
-	}
-	return (NULL);
+	if (!(ft_memcpy(str, s, s_len)))
+		return (NULL);
+	*(str + s_len) = 0;
+	return (str);
 }
 
 // #include <limits.h>

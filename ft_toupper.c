@@ -6,7 +6,7 @@
 /*   By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:16:32 by tkitahar          #+#    #+#             */
-/*   Updated: 2024/04/17 21:44:03 by tkitahar         ###   ########.fr       */
+/*   Updated: 2024/05/11 17:13:33 by tkitahar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 		return (c - 32);
-	else
-		return (c);
+	return (c);
 }
 
 // #include <ctype.h>
