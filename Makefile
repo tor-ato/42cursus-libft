@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/11 19:28:29 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/12 18:42:10 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,15 @@ test = \
 		ft_lstclear.o
 
 debug = \
-	ft_strtrim.c \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstiter.o \
+		ft_lstmap.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c
 
 all : $(NAME)
 
@@ -103,7 +111,7 @@ tst :  $(test)
 	$(CC) $(CFLAGS) -g -fsanitize=address $^
 	./a.out
 
-debug :  re
+debug :  $(debug)
 	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
 	./a.out
 
