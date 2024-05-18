@@ -6,99 +6,79 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/12 18:42:10 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/18 13:02:29 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-OBJS =	\
-		ft_strlen.o \
-		ft_strlcpy.o \
-		ft_strlcat.o \
-		ft_strchr.o \
-		ft_strrchr.o \
-		ft_strnstr.o \
-		ft_strncmp.o \
-		ft_memset.o \
-		ft_bzero.o \
-		ft_memcpy.o \
-		ft_memchr.o \
-		ft_memmove.o \
-		ft_memcmp.o \
-		ft_atoi.o \
-		ft_isalpha.o \
-		ft_isdigit.o \
-		ft_isalnum.o \
-		ft_isascii.o \
-		ft_isspace.o \
-		ft_isprint.o \
-		ft_toupper.o \
-		ft_tolower.o \
-		ft_calloc.o \
-		ft_strdup.o \
-		ft_islower.o \
-		ft_isupper.o \
-		ft_calloc.o \
-		ft_substr.o \
-		ft_strjoin.o \
-		ft_strtrim.o \
-		ft_strldup.o \
-		ft_split.o \
-		ft_itoa.o \
-		ft_strmapi.o \
-		ft_striteri.o \
-		ft_putchar_fd.o \
-		ft_putstr_fd.o \
-		ft_putendl_fd.o \
-		ft_putnbr_fd.o \
-		ft_strltrim.o \
-		ft_abs.o \
-		ft_lstnew.o \
-		ft_lstadd_front.o \
-		ft_lstsize.o \
-		ft_lstlast.o \
-		ft_lstiter.o \
-		ft_lstmap.o \
-		ft_lstadd_back.o \
-		ft_lstdelone.o \
-		ft_lstclear.o
+FILENAME =	\
+		ft_strlen \
+		ft_strlcpy \
+		ft_strlcat \
+		ft_strchr \
+		ft_strrchr \
+		ft_strnstr \
+		ft_strncmp \
+		ft_memset \
+		ft_bzero \
+		ft_memcpy \
+		ft_memchr \
+		ft_memmove \
+		ft_memcmp \
+		ft_atoi \
+		ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isascii \
+		ft_isspace \
+		ft_isprint \
+		ft_toupper \
+		ft_tolower \
+		ft_calloc \
+		ft_strdup \
+		ft_islower \
+		ft_isupper \
+		ft_calloc \
+		ft_substr \
+		ft_strjoin \
+		ft_strtrim \
+		ft_strldup \
+		ft_split \
+		ft_itoa \
+		ft_strmapi \
+		ft_striteri \
+		ft_putchar_fd \
+		ft_putstr_fd \
+		ft_putendl_fd \
+		ft_putnbr_fd \
+		ft_strltrim \
+		ft_abs \
+		ft_lstnew \
+		ft_lstadd_front \
+		ft_lstsize \
+		ft_lstlast \
+		ft_lstiter \
+		ft_lstmap \
+		ft_lstadd_back \
+		ft_lstdelone \
+		ft_lstclear
 
+OBJS = $(addprefix objs/, $(addsuffix .o,$(FILENAME)))
 
 CFLAGS = -Wall -Wextra -Werror
-
-test = \
-		ft_lstnew.o \
-		ft_lstadd_front.o \
-		ft_lstsize.o \
-		ft_lstlast.o \
-		ft_lstiter.o \
-		ft_lstmap.o \
-		ft_lstadd_back.o \
-		ft_lstdelone.o \
-		ft_lstclear.o
-
-debug = \
-		ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstiter.o \
-		ft_lstmap.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c
+INCLUDES = -I includes
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(AR) -rsc $@ $^
 
-%.o : %.c
-	$(CC) -c $(CFLAGS) $^
+objs/%.o : src/%.c
+	$(CC)  $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean :
-	$(RM)  $(OBJS)
+	$(RM)  $(OBJSWD)
 
 fclean : clean
 	$(RM)  $(NAME)
@@ -106,15 +86,6 @@ fclean : clean
 re : fclean all
 
 bonus : all
-
-tst :  $(test)
-	$(CC) $(CFLAGS) -g -fsanitize=address $^
-	./a.out
-
-debug :  $(debug)
-	$(CC) $(CFLAGS)  -g -fsanitize=address $(debug)
-	./a.out
-
 
 .PHONY: all clean fclean re tst
 
