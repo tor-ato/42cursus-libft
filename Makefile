@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/18 14:05:25 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/18 16:52:47 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,7 @@ objs/%.o : srcs/%.c
 	@if [ ! -d "objs" ]; then\
 		mkdir objs;\
 	fi
-	$(CC)  $(CFLAGS) $(INCLUDES) -c $^ -o $@
+	$(CC)  $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean :
 	$(RM)  $(OBJS)
