@@ -6,7 +6,7 @@
 #    By: tkitahar <tkitahar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 01:33:09 by tkitahar          #+#    #+#              #
-#    Updated: 2024/05/18 13:02:29 by tkitahar         ###   ########.fr        #
+#    Updated: 2024/05/18 13:31:00 by tkitahar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,10 +75,10 @@ $(NAME) : $(OBJS)
 	$(AR) -rsc $@ $^
 
 objs/%.o : src/%.c
-	$(CC)  $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CC)  $(CFLAGS) $(INCLUDES) -c $^ -o $@
 
 clean :
-	$(RM)  $(OBJSWD)
+	$(RM)  $(OBJS)
 
 fclean : clean
 	$(RM)  $(NAME)
