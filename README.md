@@ -1,1 +1,2 @@
-Remake  libc
+# 42cursus-libft
+Remake of libc
